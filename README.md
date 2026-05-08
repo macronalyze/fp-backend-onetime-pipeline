@@ -74,3 +74,9 @@ isin_data/          # ISIN master files (NSE, BSE, merged)
 - Python 3
 - MongoDB running on `localhost:27017`
 - `pymongo` (`pip install pymongo`)
+
+### Collection Creation command
+
+```
+db.createCollection("raw_bhav_data_v3", { storageEngine: { wiredTiger: { configString: "block_compressor=zstd" } } })
+```
