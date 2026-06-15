@@ -28,7 +28,7 @@ OUTPUT_DIR = os.path.join(SCRIPT_DIR, 'output')
 UNMATCHED_FILE = os.path.join(OUTPUT_DIR, 'unmatched.csv')
 
 SOURCE = 'NSE'
-OUTPUT_HEADER = ['isin', 'source', 'trade_date', 'face_value', 'issue_size', 'market_cap']
+OUTPUT_HEADER = ['_id', 'isin', 'source', 'trade_date', 'face_value', 'issue_size', 'market_cap']
 
 
 def load_nse_isin_lookup(path):
@@ -120,7 +120,8 @@ def process_mcap_file(path, isin_lookup, unmatched_writer):
             issue_size = parse_int(row.get('Issue Size'))
             market_cap = parse_float(row.get('Market Cap(Rs.)'))
 
-            rows_out.append([isin, SOURCE, td, face_value, issue_size, market_cap])
+            doc_id = f"{isin}_{td}"
+            rows_out.append([doc_id, isin, SOURCE, td, face_value, issue_size, market_cap])
             matched += 1
 
     return trade_date_iso, rows_out, {
