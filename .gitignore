@@ -4,3 +4,5 @@ _env
 bhavcopy_links
 raw_input_files
 
+mcap_data/input_files
+mcap_data/output

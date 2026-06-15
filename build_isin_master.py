@@ -18,7 +18,9 @@ with open(NSE_FILE) as f:
         symbol = row.get('SYMBOL', '').strip()
         name = row.get('NAME OF COMPANY', '').strip()
         series = row.get(' SERIES', '').strip()
-        if isin and series == 'EQ':
+        # EQ = rolling segment, BE = Trade-to-Trade, BZ = restricted/illiquid
+        # All three are NSE-listed equities that appear in bhavcopy
+        if isin and series in ('EQ', 'BE', 'BZ'):
             nse_by_isin[isin] = {'symbol': symbol, 'name': name}
 
 # Load BSE data keyed by ISIN

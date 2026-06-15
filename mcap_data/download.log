@@ -1,0 +1,8 @@
+[2026-06-15 12:47:46] Downloading PR zips from 10062026 to 12062026
+[2026-06-15 12:47:46] OK: PR100626.zip
+[2026-06-15 12:47:47] OK: PR110626.zip
+[2026-06-15 12:47:47] OK: PR120626.zip
+[2026-06-15 12:47:48] Download summary: attempted=3 ok=3 fail=0 skipped_existing=0 skipped_weekend=0
+[2026-06-15 12:47:48] Extracting zips from /Users/sudhara/Downloads/bhav/mcap_data/input_files/zips -> /Users/sudhara/Downloads/bhav/mcap_data/input_files/extracted
+[2026-06-15 12:47:48] Extract summary: ok=3 fail=0 skipped=0
+[2026-06-15 12:47:48] Done.
